@@ -20,4 +20,6 @@ USER appuser
 RUN pip3 install --upgrade pip && \
     pip3 install --trusted-host files.pythonhosted.org fwhunt-scan==2.3.5 --user
 
+USER root
 RUN apk del .required_apks
+USER appuser
