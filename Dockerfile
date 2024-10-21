@@ -16,7 +16,7 @@ RUN addgroup -g 666 appuser && \
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 USER appuser
 
-# Cf. https://pypi.org/project/uefi-r2/
+# Cf. https://pypi.org/project/fwhunt-scan/
 RUN pip3 install --upgrade pip && \
     pip3 install --trusted-host files.pythonhosted.org fwhunt-scan==2.3.5 --user
 
