@@ -1,5 +1,5 @@
 # Cf. https://hub.docker.com/_/python/
-FROM python:3.13.0-alpine3.20
+FROM python:3.13.1-alpine3.20
 
 LABEL maintainer "florian.stosse@gmail.com"
 LABEL lastupdate "2024-10-08"
