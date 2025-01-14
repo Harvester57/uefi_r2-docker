@@ -2,9 +2,9 @@
 FROM python:3.13.1-alpine3.20
 
 LABEL maintainer "florian.stosse@gmail.com"
-LABEL lastupdate "2024-10-08"
+LABEL lastupdate "2025-01-14"
 LABEL author "Florian Stosse"
-LABEL description "FwHunt scanner v2.3.5, built using Python v3.13.0 Alpine-based image"
+LABEL description "FwHunt scanner v2.3.7, built using Python v3.13.0 Alpine-based image"
 LABEL license "MIT license"
 
 RUN apk add --no-cache -t .required_apks gcc make g++
@@ -18,7 +18,7 @@ USER appuser
 
 # Cf. https://pypi.org/project/fwhunt-scan/
 RUN pip3 install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org fwhunt-scan==2.3.5 --user
+    pip3 install --trusted-host files.pythonhosted.org fwhunt-scan==2.3.7 --user
 
 USER root
 RUN apk del .required_apks
