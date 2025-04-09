@@ -2,9 +2,9 @@
 FROM python:3.13.3-alpine3.20
 
 LABEL maintainer "florian.stosse@gmail.com"
-LABEL lastupdate "2025-01-14"
+LABEL lastupdate "2025-04-09"
 LABEL author "Florian Stosse"
-LABEL description "FwHunt scanner v2.3.7, built using Python v3.13.0 Alpine-based image"
+LABEL description "FwHunt scanner v2.3.7, built using Python v3.13.3 Alpine-based image"
 LABEL license "MIT license"
 
 RUN apk add --no-cache -t .required_apks gcc make g++
