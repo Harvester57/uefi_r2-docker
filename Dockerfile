@@ -7,6 +7,9 @@ LABEL author="Florian Stosse"
 LABEL description="FwHunt scanner v2.3.7, built using Python v3.13.3 Alpine-based image"
 LABEL license="MIT license"
 
+RUN apk update && \
+    apk upgrade --available
+
 RUN apk add --no-cache -t .required_apks gcc make g++ ca-certificates
 
 RUN addgroup -g 666 appuser && \
