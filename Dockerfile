@@ -7,7 +7,7 @@ LABEL author="Florian Stosse"
 LABEL description="FwHunt scanner v2.3.7, built using Python v3.13.3 Alpine-based image"
 LABEL license="MIT license"
 
-RUN apk add --no-cache -t .required_apks gcc make g++
+RUN apk add --no-cache -t .required_apks gcc make g++ ca-certificates
 
 RUN addgroup -g 666 appuser && \
     mkdir -p /home/appuser && \
@@ -18,7 +18,7 @@ USER appuser
 
 # Cf. https://pypi.org/project/fwhunt-scan/
 RUN pip3 install --upgrade pip && \
-    pip3 install --trusted-host files.pythonhosted.org fwhunt-scan==2.3.7 --user
+    pip3 install fwhunt-scan==2.3.7 --user
 
 USER root
 RUN apk del .required_apks
