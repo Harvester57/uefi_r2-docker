@@ -1,8 +1,8 @@
 # Cf. https://hub.docker.com/_/python/
-FROM python:3.13.3-alpine3.20
+FROM python:3.13.3-alpine3.21@sha256:18159b2be11db91f84b8f8f655cd860f805dbd9e49a583ddaac8ab39bf4fe1a7
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-04-09"
+LABEL lastupdate="2025-04-27"
 LABEL author="Florian Stosse"
 LABEL description="FwHunt scanner v2.3.7, built using Python v3.13.3 Alpine-based image"
 LABEL license="MIT license"
