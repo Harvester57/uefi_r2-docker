@@ -21,7 +21,7 @@ USER appuser
 
 # Cf. https://pypi.org/project/fwhunt-scan/
 RUN pip3 install --upgrade pip && \
-    pip3 install fwhunt-scan==2.3.8 --user
+    pip3 install fwhunt-scan==2.3.8 --user --no-cache-dir
 
 USER root
 RUN apk del .required_apks
